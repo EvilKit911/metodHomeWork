@@ -1,7 +1,6 @@
 import java.time.LocalDate;
 
 public class MetodHomeWork {
-
     public static void main(String[] args) {
         // задание 1
     int testYear = 2020;
@@ -13,10 +12,17 @@ public class MetodHomeWork {
         int clientDeviceYear = 2022;// год выхода телефона
         checkPhoneAndSetupBankApp(currentYear, clientOS, clientDeviceYear);
 
+        // задание 3
+
+        int deliveryDistance = 46;// дистанция
+
+        int deliveryDay = deliveryCalculation(deliveryDistance);// нам необходимо узнать сколько нужно дней для доставки
+        System.out.println("потребуеться дней " + deliveryDay); //вывод
+
 }
         //  задание 1
     public static int checkYear (int testYear){ // метод проверки года, принимает значение года
-
+        System.out.println(" ");
 
         if(testYear % 4 == 0 & testYear % 100 != 0){
             // если год делиться на 4 без остатка и делиться на 100 с остатком год високосный
@@ -47,4 +53,22 @@ public class MetodHomeWork {
         return currentYear & clientOS & clientDeviceYear;
     }
 
+    public static int deliveryCalculation(int deliveryDistance){// принимаем дистанцию
+        System.out.println(" ");
+
+        int deliveryDay = 0;
+        if (deliveryDistance <= 20){
+            int day = 1; deliveryDay = day;
+
+        }
+        else if (deliveryDistance >20 & deliveryDistance <60){
+            int day = 2; deliveryDay = day;
+
+        }
+        else if (deliveryDistance >=60 & deliveryDistance < 100){
+            int day = 3; deliveryDay = day;
+
+        }
+        return deliveryDay ;// возвращаем количество дней
+    }
 }
