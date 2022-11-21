@@ -11,6 +11,13 @@ public class MetodHomeWork {
         int clientOS = 0;// клинетская ось 0 - IOS, 1 - Android
         int clientDeviceYear = 2022;// год выхода телефона
         checkPhoneAndSetupBankApp(currentYear, clientOS, clientDeviceYear);
+
+        // задание 3
+
+        int deliveryDistance = 80;// дистанция
+
+        int deliveryDay = deliveryCalculation(deliveryDistance);// нам необходимо узнать сколько нужно дней для доставки
+        System.out.println("потребуеться дней " + deliveryDay); //вывод
     }
     //  задание 1
     public static int checkYear (int testYear){ // метод проверки года, принимает значение года
@@ -44,4 +51,25 @@ public class MetodHomeWork {
 
         return currentYear & clientOS & clientDeviceYear;
     }
+
+    // задание 3
+    public static int deliveryCalculation(int deliveryDistance){// принимаем дистанцию
+        System.out.println(" ");
+
+        int deliveryDay = 0;
+        if (deliveryDistance <= 20){
+            int day = 1; deliveryDay = day;
+
+        }
+        else if (deliveryDistance >20 & deliveryDistance <60){
+            int day = 2; deliveryDay = day;
+
+        }
+        else if (deliveryDistance >=60 & deliveryDistance < 100){
+            int day = 3; deliveryDay = day;
+
+        }
+        return deliveryDay ;// возвращаем количество дней
+    }
 }
+
